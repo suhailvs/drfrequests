@@ -44,8 +44,8 @@ class ApiEndpoint(object):
 
     def is_method_allowed(self, callback_cls, method_name):
         has_attr = hasattr(callback_cls, method_name)
-        viewset_method = (issubclass(callback_cls, ModelViewSet) and
-                          method_name in VIEWSET_METHODS.get(self.callback.suffix, []))
+        viewset_method = issubclass(callback_cls, ModelViewSet) 
+        # and method_name in VIEWSET_METHODS.get(self.callback.suffix, []))
 
         return has_attr or viewset_method
 
