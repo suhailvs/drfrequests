@@ -8,20 +8,20 @@ Django Rest Framework Requests
 
 Install using pip:
 
-    pip install drfdocs
+    pip install drfrequests
 
 Add 'rest_framework_docs' to your `INSTALLED_APPS` setting:
 
-    INSTALLED_APPS = (
+    INSTALLED_APPS = [
         ...
-        'rest_framework_docs',
-    )
+        'rest_framework_requests',
+    ]
 
 Finally include the `rest_framework_docs` urls in your `urls.py`:
 
     urlpatterns = [
         ...
-        url(r'^docs/', include('rest_framework_docs.urls')),
+        path('docs/', include('rest_framework_requests.urls')),
     ]
 
 
@@ -42,6 +42,6 @@ This project is a frok of <https://github.com/manosim/django-rest-framework-docs
 
 * increment the version number in your `setup.cfg` file
 * `$ python3 -m build`
-* First upload to TestPypi: ``twine upload --repository testpypi dist/*`
+* First upload to TestPypi: `twine upload --repository testpypi dist/*`
 * install `pip install --index-url https://test.pypi.org/simple/ --no-deps drfrequests`
 
