@@ -1,12 +1,12 @@
 from django.http import Http404
 from django.views.generic.base import TemplateView
-from rest_framework_docs.api_docs import ApiDocumentation
-from rest_framework_docs.settings import DRFSettings
+from rest_framework_requests.api_docs import ApiDocumentation
+from rest_framework_requests.settings import DRFSettings
 
 
 class DRFDocsView(TemplateView):
 
-    template_name = "rest_framework_docs/home.html"
+    template_name = "rest_framework_requests/home.html"
     drf_router = None
 
     def get_context_data(self, **kwargs):

@@ -1,10 +1,10 @@
 var webpack = require('webpack');
 
 module.exports = {
-  context: __dirname + '/rest_framework_docs/js',
+  context: __dirname + '/rest_framework_requests/js',
   entry: './index.js',
   output: {
-    path: __dirname + '/rest_framework_docs/js',
+    path: __dirname + '/rest_framework_requests/js',
     filename: 'dist.min.js'
   },
   devtool: 'source-map',

@@ -3,7 +3,7 @@ from django.conf import settings
 
 from django.utils.module_loading import import_string
 from rest_framework.views import APIView
-from rest_framework_docs.api_endpoint import ApiEndpoint
+from rest_framework_requests.api_endpoint import ApiEndpoint
 
 from .compat import get_regex_pattern, is_url_pattern, is_url_resolver
 
