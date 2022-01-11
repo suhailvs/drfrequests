@@ -45,3 +45,4 @@ This project is a frok of <https://github.com/manosim/django-rest-framework-docs
 * First upload to TestPypi: `twine upload --repository testpypi dist/*`
 * install `pip install --index-url https://test.pypi.org/simple/ --no-deps drfrequests`
 
+pip install -e ../drfrequests/

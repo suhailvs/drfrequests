@@ -105,7 +105,7 @@ class ApiEndpoint(object):
             return self.callback.cls.serializer_class
 
         if hasattr(self.callback.cls, 'get_serializer_class'):
-            return self.callback.cls.get_serializer_class(self.pattern.callback.cls())
+            return self.callback.cls.get_serializer_class() #self.pattern.callback.cls())
 
     def __get_serializer_fields__(self, serializer):
         fields = []
