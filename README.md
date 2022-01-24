@@ -38,11 +38,26 @@ You can find detailed information about the package's settings at [the docs](htt
 This project is a frok of <https://github.com/manosim/django-rest-framework-docs> which is a fork of <https://github.com/marcgibbons/django-rest-framework-docs>
 
 
-### Test Build
+
+## packaging: Update Version
+
+Updating your distribution Down the road, after you’ve made updates to your distribution and wish to make a new release:
+
+    pip install build
+    pip install twine
 
 * increment the version number in your `setup.cfg` file
 * `$ python3 -m build`
-* First upload to TestPypi: `twine upload --repository testpypi dist/*`
-* install `pip install --index-url https://test.pypi.org/simple/ --no-deps drfrequests`
 
-pip install -e ../drfrequests/
+
+Upload package to the Python Package Index:
+
+    $ twine upload dist/*
+
+    
+see: https://packaging.python.org/tutorials/packaging-projects/
+
+
+### For development
+
+    pip install -e ../drfrequests/
